@@ -1,25 +1,32 @@
-import React from "react";
-import { Link, Route, BrowserRouter as Router } from "react-router-dom";
-import PizzaForm from "./PizzaForm";
-import "./App.css";
-import Logo from "./Pizza.jpeg";
+import React from "react"
+import { Link, Route } from "react-router-dom"
+import Form from "./PizzaForm"
+import Home from "./Home"
+import "./App.css"
+import Logo from "./Pizza.jpeg"
 
-function PizzaHeader() {
-return (<Router>
-  <div className="nav-links">
-    <div className="navBar">
-      <div className="link1">
-        <h1>Jacob's 🤯 Pizza</h1>
+
+function Header() {
+  return (
+    <div className="nav-links">
+      <div className="navBar">
+      <div className="linkA">
         <Link to="/">Home</Link>
-  </div>
-      <div className="link2">
-        <Link to="/Form">Order Online</Link><img src={Logo} alt ="pizza"/>
-        <Route path="/Form">
-        <PizzaForm/>
-      </Route>
+      </div>
+      <div className="linkB">
+        <Link to="/PizzaForm">Order Now</Link>
      </div> 
      </div>
-</div>
-   </Router>
-   );}
-export default PizzaHeader 
+      <h1>Jacob's 🤯 Pizzza</h1>
+      <img src={Logo} alt ="pizza"/>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/PizzaForm">
+        <Form />
+      </Route>
+   </div>
+
+  );
+}
+export default Header;

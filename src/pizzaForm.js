@@ -253,4 +253,4 @@ return (<form onSubmit={onSubmit}>
 </form>
 )}
 
-export default PizzaForm 
+export default PizzaForm;
