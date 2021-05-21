@@ -92,9 +92,9 @@ const inputChange = (name, value) =>{
 
 return (<form onSubmit={onSubmit}>
 <div className = 'form'>
-        <h3>Build Your Pizza</h3>
+        <h2>Build Your Pizza</h2>
     <label>
-         Name
+         Name: 
     <input
         value={orderValues.name}
         onChange={onChange}
@@ -102,7 +102,7 @@ return (<form onSubmit={onSubmit}>
         type='text'/>
 </label>
 <label>
-    Email 
+    Email: 
         <input
             value={orderValues.email}
             onChange={onChange}
@@ -110,7 +110,7 @@ return (<form onSubmit={onSubmit}>
             type='email'/>
 </label>
     <label>
-        Phone Number 
+        Phone Number:
     <input
         value={orderValues.phone}
         onChange={onChange}
