@@ -161,6 +161,13 @@ button{
   padding:.4%;
 }
 
+p {
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
 /* form styles */
 form{
  border: 2px solid black; 
