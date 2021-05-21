@@ -4,25 +4,26 @@ import axios from 'axios'
 import PizzaCheckout from './PizzaCheckout'
 
 const initialOrderValues = {
-name: '',
-email: '',
-phone:'',
-text:'',
-size:'',
-sauce:'',
-sausage: false,
-onions: false,
-greenPeppers: false,
-olives: false,
-pepperoni: false,
-extraCheese: false,
-mushrooms: false,
-jalepenos: false,
+    name: '',
+    email: '',
+    phone:'',
+    text:'',
+    size:'',
+    sauce:'',
+    sausage: false,
+    onions: false,
+    greenPeppers: false,
+    olives: false,
+    pepperoni: false,
+    extraCheese: false,
+    mushrooms: false,
+    jalepenos: false,
 }
 
-const initialOrderErrors = {name: '',
-email: '',
-phone:'',
+const initialOrderErrors = { 
+    name: '',
+    email: '',
+    phone:'',
 }
 
 function PizzaForm(){
@@ -100,15 +101,15 @@ return (<form onSubmit={onSubmit}>
         onChange={onChange}
         name='name'
         type='text'/>
-</label>
-<label>
+    </label>
+    <label>
     Email: 
         <input
             value={orderValues.email}
             onChange={onChange}
             name='email'
             type='email'/>
-</label>
+    </label>
     <label>
         Phone Number:
     <input
@@ -116,9 +117,9 @@ return (<form onSubmit={onSubmit}>
         onChange={onChange}
         name='phone'
         type='text'/>
-</label>
+    </label>
 
-<label>
+    <label>
     <select
      name='size'
      value={orderValues.size}
@@ -128,8 +129,8 @@ return (<form onSubmit={onSubmit}>
         <option value="lrg">Large</option>
         <option value="med">Medium</option>
         <option value="small">Small</option>
-</select>
-</label>
+    </select>
+    </label>
 
             <h2>Choice of Sauce</h2>
             <h4>(Required)</h4>
@@ -142,7 +143,7 @@ return (<form onSubmit={onSubmit}>
             checked={orderValues.sauce === "red"}
             onChange={onChange}
           />
-</label>
+    </label>
     <label>
         Garlic Ranch
           <input
@@ -152,7 +153,7 @@ return (<form onSubmit={onSubmit}>
             checked={orderValues.sauce === "gr"}
             onChange={onChange}
           />
-</label>
+    </label>
     <label>
         Bbq Sauce
           <input
@@ -162,20 +163,20 @@ return (<form onSubmit={onSubmit}>
             checked={orderValues.sauce === "bbq"}
             onChange={onChange}
           />
-</label>
-        <label>
-          Spinach Alfredo
-          <input
+    </label>
+    <label>
+        Spinach Alfredo
+        <input
             type="radio"
             name="sauce"
             value="sce"
             checked={orderValues.sauce === "sce"}
             onChange={onChange}/>
-</label>
+    </label>
             <h2>Add Toppings</h2>
             <h4>(up to 6 toppings maximum</h4>
 
-<div className="checks">
+    <div className="checks">
     <label> Onions
         <input
             type="checkbox"
@@ -183,7 +184,7 @@ return (<form onSubmit={onSubmit}>
             checked={orderValues.onions}
             onChange={onChange}/>
 
-</label>
+    </label>
     <label> Jalepenos
         <input
             type="checkbox"
@@ -191,7 +192,7 @@ return (<form onSubmit={onSubmit}>
             checked= {orderValues.jalepenos}
             onChange={onChange} />
 
-</label>
+    </label>
     <label> Mushrooms
          <input
             type="checkbox"
@@ -199,7 +200,7 @@ return (<form onSubmit={onSubmit}>
             checked={orderValues.mushrooms}
             onChange={onChange} />
 
-</label>
+    </label>
     <label> Pepperoni
         <input
             type="checkbox"
@@ -207,36 +208,36 @@ return (<form onSubmit={onSubmit}>
             checked={orderValues.pepperoni}
             onChange={onChange}/>
 
-</label>
+    </label>
     <label> Pineapple
         <input
             type="checkbox"
             name="pineapple"
             checked={orderValues.pineapple}
             onChange={onChange}/>
-</label>
+    </label>
     <label> Extra Cheese
         <input
             type="checkbox"
             name="extraCheese"
             checked={orderValues.extraCheese}
             onChange={onChange}/>
-</label>
+    </label>
     <label> Green Peppers
         <input
             type="checkbox"
              name="greenPeppers"
             checked={orderValues.greenPeppers}
             onChange={onChange}/>
-</label>
+    </label>
     <label> Black Olives
         <input
           type="checkbox"
           name="blackOlives"
           checked={orderValues.blackOlives}
           onChange={onChange}/>
-</label>
-</div>
+    </label>
+    </div>
 
     <h2>Special Instructions</h2>
          <textarea className='textarea'
@@ -244,12 +245,12 @@ return (<form onSubmit={onSubmit}>
             value={orderValues.textarea}
             onChange={onChange}
             placeholder=" Anything else you'd like to add?" rows ="4" cols="50"/>
-<div className="add-to">
+    <div className="add-to">
 
     <button id="submit-btn" onClick={(evt)=> evt.preventDefault}>Add to order</button>
-</div>
+    </div>
      <PizzaCheckout newOrder={newOrder} />
-</div>
+    </div>
 </form>
 )}
 
